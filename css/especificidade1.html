@@ -6,6 +6,27 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /* em linhas gerais: NaN NaN NaN;
+        
+            1. regra com !important
+            2. seletores mais específicos
+            3. última processado tem prioridade(no caso de empate) */
+
+            p{
+                background-color: gray;
+            }
+
+            .orbservacao{
+                background-color: #555!important;
+                border: dashed 5px;
+                padding: 20px;
+                font-size: 40px;
+            }
+
+            p.observacao{
+                padding: 2px;
+                background: linear-gradient(to right, red, yellow);
+            }
     </style>
 </head>
 
